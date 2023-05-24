@@ -9,9 +9,23 @@
     <%= restaurant.address %>
   </p>
 
-  <p>
-    <strong>Rating:</strong>
-    <%= restaurant.rating %>
-  </p>
+    <p>
+    <strong>Phone number:</strong>
+    <%= restaurant.phone_number %>
+    </p>
+
+    <p>
+    <strong>Category:</strong>
+    <%= restaurant.category %>
+   </p>
+
 
 </div>
+
+    <p><strong>Reviews</strong></p>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item"><%= review.content %></li>
+    <% end %>
+  </ul>
+<br>
